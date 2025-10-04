@@ -6,10 +6,10 @@
 }
 
 :root {
-    --colorDark1: #112D4E;
-    --colorDark2: #3F72AF;
-    --colorLight1: #DBE2EF;
-    --colorLight2: #F9F7F7;
+    --colorDark1: #0F2027;   /* Deep Navy */
+    --colorDark2: #2C5364;   /* Teal/Navy Blend */
+    --colorLight1: #CAD3C8;  /* Light Grey */
+    --colorLight2: #FFFFFF;  /* White */
 }
 
 .wrapper {
@@ -17,13 +17,14 @@
     height: 100vh;
     overflow-x: hidden;
     color: var(--colorLight2);
-    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    background-image: linear-gradient(160deg, var(--colorDark1) 0%, var(--colorDark2) 100%);
 }
 
 h1 {
     text-align: center;
     text-transform: uppercase;
     padding-top: 15px;
+    color: var(--colorLight2);
 }
 
 .tab-container {
@@ -44,7 +45,7 @@ h1 {
 }
 
 .tab.current-tab {
-    background-color: rgba(219, 226, 239, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 4px;
 }
 
@@ -58,7 +59,6 @@ h1 {
 
 .btn {
     all: unset;
-
     font-size: 0.85rem;
     text-transform: uppercase;
     border-radius: 5px;
@@ -66,6 +66,11 @@ h1 {
     color: var(--colorLight2);
     cursor: pointer;
     padding: 10px 30px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--colorDark1);
 }
 
 .btn[data-grantAccess] {
@@ -165,7 +170,7 @@ h1 {
 .parameter {
     width: 30%;
     max-width: 200px;
-    background-color: rgba(219, 226, 239, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 5px;
     padding: 1rem;
     display: flex;
@@ -204,13 +209,13 @@ h1 {
     width: calc(100% - 80px);
     height: 40px;
     padding: 0 20px;
-    background-color: rgba(219, 226, 239, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
+    color: var(--colorLight2);
 }
 
 .form-container input::placeholder {
     color: rgba(255, 255, 255, 0.7);
-
 }
 
 .form-container input:focus {
@@ -239,4 +244,7 @@ h1 {
 
 .error.active {
     display: flex;
+}
+
+
 }
